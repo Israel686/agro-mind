@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Sprout } from "lucide-react";
+import { Sprout, Smartphone } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Login = () => {
@@ -70,6 +70,15 @@ const Login = () => {
             <Button type="submit" className="w-full" size="lg">
               Entrar
             </Button>
+            
+            <div className="text-center pt-4 border-t">
+              <Link to="/install">
+                <Button variant="outline" className="w-full gap-2">
+                  <Smartphone className="w-4 h-4" />
+                  Instalar App no Celular
+                </Button>
+              </Link>
+            </div>
           </form>
         </CardContent>
       </Card>
